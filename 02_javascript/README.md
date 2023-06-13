@@ -35,6 +35,9 @@ const sum = a.add(b);
 const abs = sum.abs();
 ```
 
+Please also document all the public methods/classes using JSDoc.
+
+
 ## Resources
 
 * JavaScript tutorial - https://javascript.info/
