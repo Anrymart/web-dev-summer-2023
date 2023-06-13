@@ -18,21 +18,26 @@
 
 Implement a JavaScript library for 2D-vectors. User should be able to create vector, add, subtract, multiply (scalar product), find length, find unit vectors, find direction angle. Operations should not modify current vector.
 
-Here is an example of how the library may be used:
+An example how the library might be used:
 
 ```javascript
+
 // Constructing a vector
 const a = new Vector(1, 2);
+
 // Another possible way to construct a vector
 const b = Vector.of(2, 0.5);
 
+// Adding vectors
 const sum = a.add(b);
+
+// Calculating vector length
 const abs = sum.abs();
 ```
 
 ## Resources
 
-JavaScript tutorial - https://javascript.info/
-JavaScript advanced - https://github.com/getify/You-Dont-Know-JS
+* JavaScript tutorial - https://javascript.info/
+* JavaScript advanced - https://github.com/getify/You-Dont-Know-JS
 
-https://caniuse.com/ – shows the current state of support for various features.
+* https://caniuse.com/ – shows the current state of support for various features.
