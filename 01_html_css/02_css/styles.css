@@ -1,5 +1,12 @@
-div, button {
-  width: 100px;
+div {
   height: 100px;
+  width: 100px;
+}
+
+.apple {
+  background-color: green;
+}
+
+.banana {
   background-color: yellow;
 }
