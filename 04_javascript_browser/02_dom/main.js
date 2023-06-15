@@ -38,7 +38,7 @@ console.log(element.previousSibling);
 
 
 /**
- * Searching
+ * Searching elements in DOM
  */
 
 // Searching by id
@@ -71,3 +71,15 @@ document.title = "New title!";
  * as an argument and outputs all elements in the root's
  * subtree in pre-order manner.
  */
+
+
+/**
+ * Modifying the document.
+ */
+
+const div = document.createElement('div');
+let textNode = document.createTextNode('Here I am');
+
+div.appendChild(textNode);
+
+document.body.appendChild(div);

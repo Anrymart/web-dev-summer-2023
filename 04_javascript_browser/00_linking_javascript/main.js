@@ -10,4 +10,4 @@
  * Debugging JavaScript
  */
 
-alert('External script is running');
+// alert('External script is running');

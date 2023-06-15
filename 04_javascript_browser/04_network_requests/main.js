@@ -3,7 +3,7 @@ const request = new XMLHttpRequest();
 request.addEventListener("load", function reqListener() {
   console.log(this.responseText);
 });
-request.open("GET", "https://api.quotable.io/quotes/random");
+request.open("GET", "https://api.quotable.io/quotes/random?tags=technology?tags=technology");
 request.send();
 
 
@@ -21,7 +21,7 @@ function requestQuote(callback) {
   request.addEventListener("load", function() {
     callback(this.responseText);
   });
-  request.open("GET", "https://api.quotable.io/quotes/random");
+  request.open("GET", "https://api.quotable.io/quotes/random?tags=technology");
   request.send();
 }
 
@@ -93,7 +93,7 @@ function getQuote() {
     request.addEventListener("load", function reqListener() {
       resolve(this.responseText);
     });
-    request.open("GET", "https://api.quotable.io/quotes/random");
+    request.open("GET", "https://api.quotable.io/quotes/random?tags=technology");
     request.send();
   });
 }
@@ -130,7 +130,7 @@ Promise.any([getQuote(), getQuote()])
 
 
 // Fetch API:
-fetch('https://api.quotable.io/quotes/random')
+fetch('https://api.quotable.io/quotes/random?tags=technology')
     .then(response => response.json())
     .then(response => console.log(response));
 

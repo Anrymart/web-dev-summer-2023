@@ -13,10 +13,11 @@
    starting from and ending with to. More complex version: print Fibonacci
    series in the same manner.
 
-
 ## Home Task
 
-Implement a JavaScript library for 2D-vectors. User should be able to create vector, add, subtract, multiply (scalar product), find length, find unit vectors, find direction angle. Operations should not modify current vector.
+Implement a JavaScript library for 2D-vectors. User should be able to create vector, add, subtract,
+multiply (scalar product), find length, find unit vectors, find direction angle. Operations should
+not modify current vector.
 
 An example how the library might be used:
 
@@ -36,7 +37,6 @@ const abs = sum.abs();
 ```
 
 Please also document all the public methods/classes using JSDoc.
-
 
 ## Resources
 

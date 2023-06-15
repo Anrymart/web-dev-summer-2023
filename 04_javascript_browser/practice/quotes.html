@@ -73,7 +73,7 @@
   button.addEventListener('click', () => {
     button.textContent = 'Loading...';
     button.setAttribute('disabled', 'true');
-    fetch('http://api.quotable.io/quotes/random')
+    fetch('https://api.quotable.io/quotes/random?tags=technology')
         .then(response => response.json())
         .then(([data]) => {
           quote.textContent = data.content;
