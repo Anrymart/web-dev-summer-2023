@@ -3,7 +3,7 @@ const request = new XMLHttpRequest();
 request.addEventListener("load", function reqListener() {
   console.log(this.responseText);
 });
-request.open("GET", "https://api.quotable.io/quotes/random?tags=technology?tags=technology");
+request.open("GET", "https://api.quotable.io/quotes/random?tags=technology");
 request.send();
 
 

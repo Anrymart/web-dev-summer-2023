@@ -29,7 +29,7 @@ function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
 
-  script.onload = () => callback(script);
+  script.onload = () => callback();
 
   document.head.append(script);
 }
