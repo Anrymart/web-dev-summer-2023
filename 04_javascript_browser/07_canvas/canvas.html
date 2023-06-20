@@ -8,46 +8,40 @@
 
 <canvas id="canvas" width="800" height="600"></canvas>
 
-<img alt="Shrek" id="image" height="300" src="https://picfiles.alphacoders.com/422/422551.jpg"/>
-
 <script>
 
   let canvas = document.getElementById("canvas");
   let context = canvas.getContext("2d");
 
-  // Draw lines
-  // context.moveTo(0, 0);
-  // context.lineTo(200, 100);
-  // context.stroke();
+  let pen = {
+    x: 0,
+    y: 0,
+    active: false,
+  };
 
-  // Draw circles
-  // context.beginPath();
-  // context.strokeStyle = "#ff0000";
-  // context.fillStyle = "#00ff00";
-  // context.arc(300, 100, 40, 0, 2 * Math.PI);
-  // context.stroke();
-  // context.fill();
+  canvas.addEventListener('mousedown', (event) => {
+    pen = {
+      x: event.offsetX,
+      y: event.offsetY,
+      active: true,
+    };
+  });
 
-  // Draw text
-  // context.font = "30px Arial";
-  // context.fillText("Hello, web-dev 2!", 10, 200);
+  document.addEventListener('mousemove', (event) => {
+    if (pen.active) {
+      context.moveTo(pen.x, pen.y);
+      context.lineTo(event.offsetX, event.offsetY);
+      context.stroke();
+    }
 
-  // Draw gradient
-  // Create gradient
-  // const gradient = context.createLinearGradient(300, 0, 500, 0);
-  // gradient.addColorStop(0, "red");
-  // gradient.addColorStop(1, "white");
+    // Update pen coordinates
+    pen.x = event.offsetX;
+    pen.y = event.offsetY;
+  });
 
-  // Fill with gradient
-  // context.fillStyle = gradient;
-  // context.fillRect(300, 200, 500, 80);
-
-  // Save canvas to image
-  // const image = document.getElementById("image");
-  // image.src = canvas.toDataURL('image/webp');
-
-  // Draw image on canvas
-  // context.drawImage(image, 400, 400);
+  document.addEventListener('mouseup', () => {
+    pen.active = false;
+  });
 </script>
 
 </body>

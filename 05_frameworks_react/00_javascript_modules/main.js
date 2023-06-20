@@ -1,8 +1,12 @@
 import {Square} from './modules/square.js';
 import {Circle} from './modules/circle.js';
+import * as sayLib from './modules/say.js';
 
 const square = new Square(3, 5);
 const circle = new Circle(4);
+
+sayLib.sayHi('John');
+sayLib.sayBye('John');
 
 console.log(square.area());
 console.log(circle.area());

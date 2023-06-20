@@ -26,7 +26,7 @@
 
   const captureVideoButton = document.querySelector('#capture-button');
   const stopVideoButton = document.querySelector('#stop-button');
-  const screenshotButton = document.querySelector('#screenshot-button');
+  // const screenshotButton = document.querySelector('#screenshot-button');
   const video = document.querySelector('#video');
 
   let videoStream;
@@ -37,7 +37,7 @@
     })
     .then((stream) => {
           videoStream = stream;
-          screenshotButton.disabled = false;
+          // screenshotButton.disabled = false;
           video.srcObject = stream;
         }
     )
