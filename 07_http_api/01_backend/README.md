@@ -4,13 +4,15 @@ https://expressjs.com/en/starter/installing.html
 Init the project:
 
 ```shell
-npm init
+mkdir backend-app
+cd backend-app
+npm init -y
 ```
 
 Install express:
 
 ```shell
-npm install express --save
+npm install express
 ```
 
 Express routing:

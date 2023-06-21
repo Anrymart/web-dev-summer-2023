@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {
@@ -37,7 +37,7 @@ app.get('/posts/:postId', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-  const postId = posts.push(req.body);
+  const postId = posts.push(req.body) - 1;
   res.json({postId});
 });
 
